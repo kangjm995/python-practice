@@ -8,8 +8,6 @@ secret = ''
 for i in range(secretLen) :
     secret += str(secretList[i])    #문자열로 변환
 
-print(secret)       #테스트용
-
 
 for chance in range(10, 0, -1) :    #10번의 기회
     #추론 숫자 입력
@@ -18,7 +16,6 @@ for chance in range(10, 0, -1) :    #10번의 기회
         if len(guess) == secretLen and guess.isdigit(): #올바른 입력 시 중단
             break
 
-    print(guess)        #테스트용
 
     #추론 숫자 분석
     strike = 0      #strike 초기화
@@ -30,7 +27,6 @@ for chance in range(10, 0, -1) :    #10번의 기회
         elif secret[i] in guess :
             ball += 1                       #ball 증가
 
-    print(secret, strike, ball)     #테스트용
 
     #분석 결과 출력
     if strike == secretLen :
